@@ -1,7 +1,7 @@
 # Git Text
 ## Have your GitHub issues texted to you using Twilio 
 
-![sample text](http://imgur.com/xhOw5Ts)
+![sample text](http://i.imgur.com/xhOw5Ts.jpg)
 
 1. Sign up for [Twilio](http://www.twilio.com/)
 
