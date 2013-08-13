@@ -22,7 +22,6 @@ EOF
 
 source ~/.bash_profile
 ```
-
 6. Modify `git_text.yml` with a repo, user, filter, and assignee you'd like to print issue changes for.
 
 7. Migrate the database:
