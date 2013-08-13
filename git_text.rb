@@ -32,7 +32,7 @@ def text_issue(settings)
 end
 
 def text_latest(settings, first_run)
-  puts "git_print is running..." unless first_run == false
+  puts "git_text is running..." unless first_run == false
   issues = github_query(settings)
   unless issues.nil?
     issues.body.each do |issue|

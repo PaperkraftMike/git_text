@@ -1,40 +1,44 @@
-# Git Print
-## Print your GitHub issues to a Dymo LabelWriter 450 Turbo Printer or equivalent
+# Git Text
+## Have your GitHub issues texted to you using Twilio 
 
-![sample label](http://imgur.com/u4WgNSB.jpg)
+![sample text](http://imgur.com/xhOw5Ts)
 
-1. Acquire a DYMO LabelWriter 450 Turbo (Maybe on [Amazon](http://www.amazon.com/gp/product/B0027JIIKQ/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0027JIIKQ&linkCode=as2&tag=gitpri-20)?)
+1. Sign up for [Twilio](http://www.twilio.com/)
 
-2. Install the [drivers & software](http://global.dymo.com/ieIE/Software/LabelWriter_450.html) and connect your printer
-
-3. Ensure you have [Ruby](https://rvm.io/rvm/install) installed 
+3. Make sure you have [Ruby](https://rvm.io/rvm/install) installed 
 
 4. Set environmental variables for your `GITHUB_USERNAME` and `GITHUB_PASSWORD`
+
+5. Set the environmental variable for your `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN`
+
 
 ```
 cat << EOF >> ~/.bash_profile
 export GITHUB_USERNAME='yourgithubemail@youremailhost.com'
 export GITHUB_PASSWORD='yourgithubpassword'
+export TWILIO_ACCOUNT_SID='yourtwilioaccountsid'
+export TWILIO_AUTH_TOKEN='yourtwilioauthtoken'
 EOF
 
 source ~/.bash_profile
 ```
 
-5. Modify `git_print.yml` with a repo, user, filter, and assignee you'd like to print issue changes for.
+5. Modify `git_text.yml` with a repo, user, filter, and assignee you'd like to print issue changes for.
 
 6. Migrate the database:
 
     `rake db:migrate`
 
-7. Run the script, `ruby git_print.rb`, to start getting labels printed every time an issue with that assignee is modified! The script must be running for this to work.
+7. Run the script, `ruby git_print.rb`, to start getting texts every time an issue with that assignee is modified! The script must be running for this to work.
 
 
 ## Contributing
 
-Forks and contributions are welcome! Just send me a PR and I'll consider including it.
+Forks and contributions are welcome! Bring them on! 
 
 ## Credits
 
-Written by [@zachfeldman](http://zfeldman.com/) for the amusement of [@sanjayginde](https://twitter.com/sanjayginde) and the whole [@contently](https://contently.com/) product team.
+Much thanks go out to the great [@zachfeldman](http://zfeldman.com/) and his [git_print](https://github.com/zachfeldman/git_print) for being my inspiration for this project. If you'd rather have your issues printed out onto sticky labels then make sure to check out his project. 
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/840a31089b7c9c72b0085b34f965f2ad "githalytics.com")](http://githalytics.com/zachfeldman/git_print)
+
+
