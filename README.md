@@ -5,30 +5,29 @@
 
 1. Sign up for [Twilio](http://www.twilio.com/)
 
-3. Make sure you have [Ruby](https://rvm.io/rvm/install) installed 
+2. Make sure you have [Ruby](https://rvm.io/rvm/install) installed 
 
-4. Set environmental variables for your `GITHUB_USERNAME` and `GITHUB_PASSWORD`
+3. Set environmental variables for your `GITHUB_USERNAME` and `GITHUB_PASSWORD`
 
-5. Set the environmental variable for your `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN`
+4. Set the environmental variable for your `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN`
 
+  ```
+  cat << EOF >> ~/.bash_profile
+  export GITHUB_USERNAME='yourgithubemail@youremailhost.com'
+  export GITHUB_PASSWORD='yourgithubpassword'
+  export TWILIO_ACCOUNT_SID='yourtwilioaccountsid'
+  export TWILIO_AUTH_TOKEN='yourtwilioauthtoken'
+  EOF
 
-```
-cat << EOF >> ~/.bash_profile
-export GITHUB_USERNAME='yourgithubemail@youremailhost.com'
-export GITHUB_PASSWORD='yourgithubpassword'
-export TWILIO_ACCOUNT_SID='yourtwilioaccountsid'
-export TWILIO_AUTH_TOKEN='yourtwilioauthtoken'
-EOF
+  source ~/.bash_profile
+  ```
+5. Modify `git_text.yml` with a repo, user, filter, and assignee you'd like to print issue changes for.
 
-source ~/.bash_profile
-```
-6. Modify `git_text.yml` with a repo, user, filter, and assignee you'd like to print issue changes for.
-
-7. Migrate the database:
+6. Migrate the database:
 
     `rake db:migrate`
 
-8. Run the script, `ruby git_print.rb`, to start getting texts every time an issue with that assignee is modified! The script must be running for this to work.
+7. Run the script, `ruby git_print.rb`, to start getting texts every time an issue with that assignee is modified! The script must be running for this to work.
 
 
 ## Contributing
