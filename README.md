@@ -23,9 +23,9 @@ EOF
 source ~/.bash_profile
 ```
 
-5. Modify `git_text.yml` with a repo, user, filter, and assignee you'd like to print issue changes for.
+6. Modify `git_text.yml` with a repo, user, filter, and assignee you'd like to print issue changes for.
 
-6. Migrate the database:
+7. Migrate the database:
 
     `rake db:migrate`
 
